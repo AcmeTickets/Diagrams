@@ -3,18 +3,19 @@
   'theme': 'base',
   'themeVariables': {
     'primaryColor': '#B8860B',
-    'primaryTextColor': '#000000',
+    'primaryTextColor': '#FFFFFF',
     'primaryBorderColor': '#B8860B',
     'lineColor': '#B8860B',
     'signalColor': '#B8860B',
-    'signalTextColor': '#000000',
+    'signalTextColor': '#FFFFFF',
     'actorBkg': '#B8860B',
-    'actorTextColor': '#000000',
+    'actorTextColor': '#FFFFFF',
     'actorLineColor': '#B8860B',
     'actorBorder': '#B8860B',
     'activationBkgColor': '#B8860B',
     'activationBorderColor': '#B8860B',
-    'sequenceNumberColor': '#000000'
+    'sequenceNumberColor': '#FFFFFF',
+    'labelTextColor': '#FFFFFF'
   }
 }}%%
 sequenceDiagram
@@ -27,15 +28,15 @@ sequenceDiagram
     participant Pricing
     participant ITOps
 
-    TicketImporter->>EventManagement: AddEventAndTicketInformation (Command)
+    TicketImporter->>EventManagement: <span style="color:#4A90E2">AddEventAndTicketInformation (Command)</span>
     EventManagement-->>Inventory: EventAdded (Event)
     EventManagement-->>FraudProtection: EventAdded (Event)
     EventManagement-->>Fulfillment: EventAdded (Event)
     EventManagement-->>Pricing: EventAdded (Event)
     EventManagement-->>ITOps: EventAdded (Event)
 
-    TicketImporter->>Inventory: AddEventTicketGroupsToInventory (Command)
+    TicketImporter->>Inventory: <span style="color:#4A90E2">AddEventTicketGroupsToInventory (Command)</span>
     Inventory-->>FraudProtection: TicketGroupForEventAdded (Event)
 
-    TicketImporter->>Fulfillment: AddEventTicketFulfillmentDetail (Command)
+    TicketImporter->>Fulfillment: <span style="color:#4A90E2">AddEventTicketFulfillmentDetail (Command)</span>
 ```
