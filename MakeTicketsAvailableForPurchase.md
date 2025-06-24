@@ -26,17 +26,12 @@ sequenceDiagram
     participant FraudProtection
     participant Fulfillment
     participant Pricing
-    participant ITOps
+    participant 🚚ITOps    
+    
+    TicketImporter->>EventManagement: 🔵AddEventAndTicketInformation (Command)
+    
+    TicketImporter->>Inventory: 🔵AddEventTicketGroupsToInventory (Command)
+    Inventory-->>FraudProtection: 🟡TicketGroupForEventAdded (Event)
 
-    TicketImporter->>EventManagement: <span style="color:#4A90E2">AddEventAndTicketInformation (Command)</span>
-    EventManagement-->>Inventory: EventAdded (Event)
-    EventManagement-->>FraudProtection: EventAdded (Event)
-    EventManagement-->>Fulfillment: EventAdded (Event)
-    EventManagement-->>Pricing: EventAdded (Event)
-    EventManagement-->>ITOps: EventAdded (Event)
-
-    TicketImporter->>Inventory: <span style="color:#4A90E2">AddEventTicketGroupsToInventory (Command)</span>
-    Inventory-->>FraudProtection: TicketGroupForEventAdded (Event)
-
-    TicketImporter->>Fulfillment: <span style="color:#4A90E2">AddEventTicketFulfillmentDetail (Command)</span>
+    TicketImporter->>Fulfillment: 🔵 AddEventTicketFulfillmentDetail (Command)
 ```
