@@ -1,6 +1,22 @@
-<link rel="stylesheet" href="mermaid-styles.css">
-
 ```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#B8860B',
+    'primaryTextColor': '#000000',
+    'primaryBorderColor': '#B8860B',
+    'lineColor': '#B8860B',
+    'signalColor': '#B8860B',
+    'signalTextColor': '#000000',
+    'actorBkg': '#B8860B',
+    'actorTextColor': '#000000',
+    'actorLineColor': '#B8860B',
+    'actorBorder': '#B8860B',
+    'activationBkgColor': '#B8860B',
+    'activationBorderColor': '#B8860B',
+    'sequenceNumberColor': '#000000'
+  }
+}}%%
 sequenceDiagram
     actor TicketImporter
 
