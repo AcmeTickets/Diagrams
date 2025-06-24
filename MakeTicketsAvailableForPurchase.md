@@ -29,7 +29,8 @@ sequenceDiagram
     participant 🚚ITOps    
     
     TicketImporter->>EventManagement: 🔵AddEventAndTicketInformation (Command)
-    
+    EventManagement-->>FraudProtection: 🟡EventAdded (Event)
+    EventManagement-->>🚚ITOps: 🟡EventAdded (Event)
     TicketImporter->>Inventory: 🔵AddEventTicketGroupsToInventory (Command)
     Inventory-->>FraudProtection: 🟡TicketGroupForEventAdded (Event)
 
