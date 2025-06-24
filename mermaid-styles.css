@@ -1,0 +1,52 @@
+/* Mermaid Diagram Styling - Dark Yellow Theme */
+
+/* Sequence Diagram Participants */
+.actor {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+    color: #000000 !important;
+}
+
+.actor-box {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+}
+
+.actor-man {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+}
+
+/* Participant boxes */
+.participant {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+}
+
+.participant-box {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+}
+
+/* Text styling */
+.actor-text,
+.participant-text {
+    fill: #000000 !important;
+    font-weight: bold;
+}
+
+/* Message lines */
+.messageLine0,
+.messageLine1 {
+    stroke: #B8860B !important;
+}
+
+/* Note styling (if used) */
+.note {
+    fill: #B8860B !important;
+    stroke: #B8860B !important;
+}
+
+.noteText {
+    fill: #000000 !important;
+}
